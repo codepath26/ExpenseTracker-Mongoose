@@ -21,7 +21,7 @@ app.use((req,res)=>{
   console.log(req.url)
   res.sendFile(path.join(__dirname,`public/${req.url}`))
 })
-const dbURI = "mongodb+srv://user:user123@mynew.ixwflah.mongodb.net/expense?retryWrites=true&w=majority";
+const dbURI =  process.env.URI;
 mongoose.connect(dbURI).then((result) => {
   app.listen(3000, () => {
     console.log("Server is running on port 3000");
