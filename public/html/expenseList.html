@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Expense Report</title>
+    <link rel="stylesheet" href="../css/expense-style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/1c844c00aa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="expenses p-3">
+        <div class="premiumUser" id="premiumUser">
+          <i class="fa-solid fa-medal"></i><span> Premium User</span>
+        </div>
+        <form id="add-items">
+          <label for="ExpenseAmount" class="form-label my-2"
+            >Choose The Expense Amount :
+          </label>
+          <input type="number" id="ExpenseAmount" class="form-control" />
+          <label for="Description" class="form-label my-2"
+            >Choose The Description :</label
+          >
+          <input type="text" id="Description" class="form-control" />
+          <label for="Category" class="form-label my-2"
+            >Choose The Category :</label
+          >
+          <select class="form-select" name="Category" id="Category">
+            <option value="Movies">Movies</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Gas">Gas</option>
+            <option value="Water">Water</option>
+            <option value="Internet">Internet</option>
+            <option value="Phone">Phone</option>
+            <option value="Studing">Studing</option>
+          </select>
+          <button class="btn btn-dark m-2">Add Expense</button>
+        </form>
+      </div>
+      <button class="btn btn-dark m-2" id="getpremium">Buy premium</button>
+      <div class="butDiv">
+        <button class="btn btn-primary m-2" id="leaderBoard">
+          Show LeaderBoard
+        </button>
+        <button class="btn btn-success  m-2" id="download">
+          Download Expenses
+        </button>
+      </div>
+    </div>
+    <div class="display mt-2 w-100 ">
+      <ul id="items" class="list-group"></ul>
+    </div>
+    <div class="display mt-2 w-100">
+      <ul id="leaderborditem" class="list-group text-center"></ul>
+    </div>
+
+    <ul id="productList" class="list-group w-50 m-auto d-none"></ul>
+
+    <div id="pagination" class="mb-5 text-center mt-3 d-none">paggination display hide for this time</div>
+    <div class="text-center bg-transparent">
+      <form id="rowperpage" >
+        <select name="rowperpage" id="row" class="custom-select custom-select-lg mb-3 d-block m-auto d-none">
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+        </select>
+        <button type="submit" class="btn   btn-dark px-4 fw-bold d-none">Set</button>
+      </form>
+    </div>
+    <script src="../js/expenseList.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
