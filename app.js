@@ -19,9 +19,17 @@ app.use(expensesRoutes);
 app.use('/password', ForgotPasswordRoutes);
 app.use((req,res)=>{
   console.log(req.url)
-  res.sendFile(path.join(__dirname,`public/${req.url}`))
+  if(req.url === '/'){
+    res.sendFile(path.join(__dirname , `public/index.html`))
+  }else{
+
+    console.log(path.join(__dirname , `public/${req.url}`))
+    res.sendFile(path.join(__dirname,`public/${req.url}`))
+  }
 })
+
 const dbURI =  process.env.URI;
+
 mongoose.connect(dbURI).then((result) => {
   app.listen(3000, () => {
     console.log("Server is running on port 3000");

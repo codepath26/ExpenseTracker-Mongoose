@@ -1,9 +1,13 @@
+body{
+  min-height: 100vh;
+  /* background-color: black; */
+  background-image: url(https://images.pexels.com/photos/54581/escalator-stairs-metal-segments-architecture-54581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-body {
-  background: linear-gradient(135deg,#103783, #9bafd9) !important; 
-  /* color: #ffffff; */
- min-height: 100vh;
 }
+
 
 .container {
   background-color: #fff;
@@ -12,6 +16,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 20px;
+ 
 }
 .expenses {
   border-bottom: 1px solid #dee2e6;
