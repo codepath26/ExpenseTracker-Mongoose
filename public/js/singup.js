@@ -21,12 +21,15 @@ e.preventDefault();
      username.value  = "";
      email.value = "";
      password.value = "" ;
-    //  window.location.href = "../html/login.html"
+     window.location.href = "../html/login.html"
     
     }catch(err){
 
       if(err.response.status === 403){
         alert1.style.display='block'
+        setTimeout(() => {
+          alert1.style.display="none"
+        },2000);
         alert1.innerHTML = err.response.data.message
         console.log(err.response.data.message);
       }else{
